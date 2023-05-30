@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwuv1pwvc8cyj"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_f16nt"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nwn8w"]
+
+[node name="Scene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.998919, -0.0376791, 0.027209, -0.00221368, 0.546201, 0.837652, -0.0464235, -0.836807, 0.545527, 0, 13.45, 9.08898)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(5.01605, 0, 0, 0, 5.01605, 0, 0, 0, 5.01605, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.200483, 0, 0, 0, 0.200483, 0, 0, 0, 0.200483, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_f16nt")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = SubResource("PlaneMesh_nwn8w")
